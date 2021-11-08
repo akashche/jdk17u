@@ -83,7 +83,7 @@ security.provider.tbd=SunPKCS11
 #
 # Security providers used when global crypto-policies are set to FIPS.
 #
-fips.provider.1=SunPKCS11 ${java.home}/conf/security/nss.fips.cfg
+fips.provider.1=SunPKCS11 /etc/java/nss.fips.cfg
 fips.provider.2=SUN
 fips.provider.3=SunEC
 fips.provider.4=SunJSSE
