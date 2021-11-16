@@ -207,7 +207,8 @@ final class P11Mac extends MacSpi {
                 ("Parameters not supported");
         }
         reset(true);
-        p11Key = P11SecretKeyFactory.convertKey(token, key, algorithm);
+        p11Key = P11SecretKeyFactory.convertKey(token, key, algorithm,
+                new CK_ATTRIBUTE[] { CK_ATTRIBUTE.SIGN_TRUE });
         try {
             initialize();
         } catch (PKCS11Exception e) {
