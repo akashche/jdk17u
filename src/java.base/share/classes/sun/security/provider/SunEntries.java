@@ -200,13 +200,15 @@ public final class SunEntries {
             addWithAlias(p, "AlgorithmParameterGenerator", "DSA",
                     "sun.security.provider.DSAParameterGenerator", attrs);
             attrs.remove("KeySize");
+        }
 
-            /*
-             * Algorithm Parameter engines
-             */
-            addWithAlias(p, "AlgorithmParameters", "DSA",
-                    "sun.security.provider.DSAParameters", attrs);
+        /*
+         * Algorithm Parameter engines
+         */
+        addWithAlias(p, "AlgorithmParameters", "DSA",
+                "sun.security.provider.DSAParameters", attrs);
 
+        if (!systemFipsEnabled) {
             /*
              * Key factories
              */
